@@ -251,7 +251,7 @@ function viewPost(id) {
     <div class="block-h" id="gate" style="margin-top:80px"><span class="mono">C</span><h2>답하고 받아가기</h2><span class="mono" style="margin-left:auto">${fmt(commentCount(p))} answers</span></div>
     <div id="gateSlot"></div>
 
-    <div class="block-h"><span class="mono">D</span><h2>먼저 답해주신 분들</h2><span class="mono" style="margin-left:auto">닉네임이랑 학년만 보여요</span></div>
+    <div class="block-h"><span class="mono">D</span><h2>먼저 답해주신 분들</h2><span class="mono" style="margin-left:auto">프로토타입 · 예시 답변</span></div>
     <ul class="comments" id="cList"></ul>
 
     <nav class="pn">
