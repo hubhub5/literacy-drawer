@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>문해력 서랍</title>
+<meta name="description" content="애 국어·독해·공부 습관 고민될 때 바로 쓰는 무료 자료. 촉촉한마케터가 만들어요.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Nanum+Pen+Script&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="intro" id="intro"><div class="intro-in"><b>문해력 서랍</b><span class="mono">Moist Notes · Literacy Archive</span></div></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress"></div>
+
+<header class="top" id="top">
+  <div class="top-in">
+    <a class="brand" href="#/"><b>문해력 서랍</b><span class="mono">by 촉촉한마케터</span></a>
+    <nav class="nav" id="nav">
+      <a href="#/">자료</a>
+      <a href="#/archive">아카이브</a>
+      <a href="#/finder">자료 찾기</a>
+      <a href="#/requests">요청함</a>
+      <a href="#/about">소개</a>
+    </nav>
+    <div class="tools">
+      <button class="tbtn hide-s" data-act="search">검색 <span class="mono" style="margin-left:6px;color:var(--mute)">⌘K</span></button>
+      <button class="tbtn sq" data-act="theme" aria-label="테마 전환" id="themeBtn">D</button>
+      <span id="authSlot"></span>
+      <button class="tbtn menu-btn" data-act="menu">메뉴</button>
+    </div>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<section class="news" id="news">
+  <div class="wrap">
+    <div>
+      <span class="mono" style="opacity:.6">Moist Notes · 매주 목요일</span>
+      <h2 style="margin-top:12px">새 자료 올라오면<br><em>제일 먼저 알려 드릴게요.</em></h2>
+      <p>일주일에 딱 한 번 보내요. 새 자료랑, 그거 만들게 된 얘기 같이요.</p>
+    </div>
+    <form data-act="newsletter">
+      <input type="email" placeholder="이메일 주소" required aria-label="이메일">
+      <button type="submit">구독하기 →</button>
+    </form>
+  </div>
+</section>
+<footer class="foot-site">
+  <div class="wrap">
+    <span>© 2026 문해력 서랍 · 촉촉한마케터. 자료는 집에서 애랑 쓰는 용도로만 써 주세요.</span>
+    <nav><a href="#/about">소개</a><a href="#/archive">아카이브</a><a href="#/requests">자료 요청</a><a href="#/" data-act="noop">이용약관</a><a href="#/" data-act="noop">개인정보처리방침</a></nav>
+  </div>
+</footer>
+
+<!-- 가입/로그인 -->
+<div class="modal" id="authModal" role="dialog" aria-modal="true">
+  <div class="dim" data-close></div>
+  <div class="box">
+    <div class="tabs"><button data-tab="join" class="on">가입하기</button><button data-tab="login">로그인</button></div>
+    <div class="box-b" id="authBody"></div>
+  </div>
+</div>
+
+<!-- 검색 -->
+<div class="modal search-ov" id="searchModal" role="dialog" aria-modal="true">
+  <div class="dim" data-close></div>
+  <div class="box">
+    <input id="searchInput" placeholder="고민 키워드로 찾아보세요 — 예: 요약, 실수, 선행" autocomplete="off">
+    <ul id="searchList"></ul>
+  </div>
+</div>
+
+<!-- 양식 크게 보기 -->
+<div class="modal wide" id="sheetModal" role="dialog" aria-modal="true">
+  <div class="dim" data-close></div>
+  <div class="box"><div id="sheetBig"></div></div>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="cursor-tag" id="cursorTag">자료 보기</div>
+<button class="to-top" id="toTop" aria-label="맨 위로">TOP</button>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
